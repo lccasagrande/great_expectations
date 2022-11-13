@@ -154,7 +154,7 @@ class InferredAssetAWSGlueDataCatalogDataConnector(
                     for tb in page["TableList"]:
                         tables.append(
                             {
-                                "database_name": tb["DatabaseName"],
+                                "database_name": db,
                                 "table_name": tb["Name"],
                                 "partitions": [p["Name"] for p in tb["PartitionKeys"]],
                             }
